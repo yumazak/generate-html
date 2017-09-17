@@ -1,6 +1,6 @@
 {
   "name": "generate-html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "generate html from json",
   "main": "index.js",
   "directories": {

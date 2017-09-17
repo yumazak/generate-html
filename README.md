@@ -5,7 +5,7 @@ Basis
 ```js
 var gHTML = require('generate-html');
 
-var html = gHTML({tagname:{attrs:{attrname:value}}});
+var html = gHTML({tagname:{attrs:{attrname:"value"},value:"value"}});
 ```
 
 example
@@ -26,7 +26,8 @@ var gHTML = require('generate-html'),
       p:{
         attrs:{
           id:"title"
-        }
+        },
+        value:"hi"
       }
     });
 console.log(html);
@@ -38,8 +39,7 @@ example result
         <img src="http://hoge/huga.png" class="image" >
         </img>
 </div>
-<p id="title" >
-</p>
+<p id="title" >hi</p>
 ```
 
 ### Install
