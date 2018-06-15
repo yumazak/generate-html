@@ -10,39 +10,17 @@ var html = gHTML({tagname:{attrs:{attrname:"value"},value:"value"}});
 
 example
 ```js
-var gHTML = require('generate-html'),
-    html = gHTML({
-      div:{
-        attrs:{
-          id:"container",
-        },
-        tags:{
-          img:{
-            src:"http://hoge/huga.png",
-            class:"image"
-          }
-        }
-      },
-      p:{
-        attrs:{
-          id:"title"
-        },
-        value:"hi"
-      }
-    });
+const gHtml = require("generate-html")
+
+html = gHtml.generate(
+    "div",
+    {id: "container"},
+    gHtml.generate("img", {src: "hogefuga.jpg"}, "") + gHtml.generate("a", {href: "http://uma0317.work"}, "my portfolio")
+)
 console.log(html);
 ```
 example result
 
 ```HTML
-<div id="container" >
-        <img src="http://hoge/huga.png" class="image" >
-        </img>
-</div>
-<p id="title" >hi</p>
-```
-
-### Install
-```bash
-$ npm install generate-html
+<div id="container"><img src="hogefuga.jpg"></img><a href="http://uma0317.work">my portfolio</a></div>
 ```
